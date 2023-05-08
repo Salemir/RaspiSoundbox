@@ -32,7 +32,7 @@ Zuvor beschriebenen SD-Karte in den entsprechenden Slot stecken
 
 Mit Netzteil verbinden (CAVE: mind. 1,5A-USB-Netzteil)
 
-WENN Hostname, WiFi und SSH im Zuge des Installationsvorgangs nicht aktiviert wurden:
+### WENN Hostname, WiFi und SSH im Zuge des Installationsvorgangs nicht aktiviert wurden:
 - Tastatur anschließen
 - Monitor anschließen
 - Netzteil anschließen
@@ -60,7 +60,7 @@ ifconfig
 ```
 unter 
 
-WENN Hostname, WiFi und SSH im Zuge des Installationsvorgangs bereits aktiviert wurden:
+### WENN Hostname, WiFi und SSH im Zuge des Installationsvorgangs bereits aktiviert wurden:
 - via SSH verbinden (mit Freeware [Putty](https://putty.org/); entweder auf IP-Adresse oder hostname.local verbinden; Hostname ersetzen durch geändertem Wert aus Installationsprozess)
 - WLAN, SSH (Kommunikation mit PC/MAC) und SPI (GPIO-Port-Steuerung) aktivieren
 sudo raspi-config
