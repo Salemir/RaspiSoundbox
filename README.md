@@ -31,11 +31,20 @@ Lautstärkeregler und Ein-/Aus-Taster verkabeln
 ## Raspberry in Betrieb nehmen
 Zuvor beschriebenen SD-Karte in den entsprechenden Slot stecken
 
+Mit Netzteil verbinden (CAVE: mind. 1,5A-USB-Netzteil)
+
 WENN WiFi und SSH nicht aktiviert wurden:
 - Tastatur anschließen
 - Monitor anschließen
 
- Mit Netzteil verbinden (CAVE: mind. 1,5A-USB-Netzteil)
+Auf Raspberry einloggen mit zuvor vergebenem Login
+
+
+
+
+
+
+
 
 ## Wenn möglich fixe IP-Adresse im Netzwerk vergeben
 Üblicherweise hat der Router des WLAN-Netzes eine Konfigurationsseite welche man über einen Browser erreichen kann (Bsp: [router.asus.com]([router.asus.com](http://router.asus.com/)). Über diese sollte  Wenn möglich Raspi via Router fixe IP zuweisen(DavidSpez) Raspi auf Asusrouter fixe IP im Netzwerk geben (momentan in unseres Jür: 192.168.1.232, David: 192.168.1.231). Dies ist notwendig um den Raspberry zu konfigurieren.
@@ -50,6 +59,12 @@ sudo raspi-config
 #unter 3 Interface Options -> I2: SSH enablen
 #unter 3 Interface Options -> I4: SPI enablen
 #unter 8 Update -> raspi-config aktualisieren
+
+
+
+
+
+
 
 o) On Off Button und AutoShutdown nach 3 Stunden enablen:
 #commandzeilen
