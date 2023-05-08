@@ -2,22 +2,26 @@
 No Tonie, no Bullshit
 
 ## Image auf SD-Karte spielen
-Image via Raspberry Pi Imager herunterladen [Raspberry Pi Imager](https://www.raspberrypi.com/software/) und auf SD-Karte spielen (Stand 05.05.2023: Raspberry PI OS Lite 64-bit)
-- bei Möglichkeit gleich folgendes während Installation aktivieren:
--- SSH, WiFi, Tastaturlayout über Imager einrichten
-Login momentan 
-User: david
-PW: wählbar
+Image via [Raspberry Pi Imager](https://www.raspberrypi.com/software/) herunterladen und auf SD-Karte spielen (Stand 05.05.2023: Raspberry PI OS Lite 64-bit)
 
-o) GPIO-Pins von Raspberry mit RFID-Scanner (RC522 Modul) verbinden:
-SDA -> GPIO8, Pin 24
-SCK -> GPIO11, Pin 23
-MOSI -> GPIO10, Pin 19
-MISO -> GPIO9, Pin 21
-IRQ -> --- 
-GND -> GND, Pin 20
-RST -> GPIO23, Pin 16
-3,3V -> 3V3 power, Pin 17
+Bei Möglichkeit während Installation gleich folgendes aktivieren/konfigurieren:
+- Hostname (mit diesem kann dann via HOSTNAME.local die Konfigurationsseite des Geräts aufgerufen werden)
+- SSH
+- Benutzername & Passwort (Bsp: david, juer, etc.)
+- WiFi
+- Tastaturlayout
+- 
+
+## Verkabelung des RFID-Scanners und Taster:
+RFID-Scanner (Modul RC522):
+- SDA -> GPIO8, Pin 24
+- SCK -> GPIO11, Pin 23
+- MOSI -> GPIO10, Pin 19
+- MISO -> GPIO9, Pin 21
+- IRQ -> NICHT ANGESCHLOSSEN
+- GND -> GND, Pin 20
+- RST -> GPIO23, Pin 16
+- 3,3V -> 3V3 power, Pin 17
 
 o) Lautstärkeregler und Ein-/Aus-Taster verkabeln
 - Ein/Aus zwischen GPIO3 (Pin 5) und GND (Pin 6) 
