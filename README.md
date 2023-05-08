@@ -55,21 +55,12 @@ ifconfig
 WENN Hostname, WiFi und SSH im Zuge des Installationsvorgangs bereits aktiviert wurden:
 - via SSH verbinden (mit Freeware [Putty](https://putty.org/); entweder auf IP-Adresse oder hostname.local verbinden; Hostname ersetzen durch geändertem Wert aus Installationsprozess)
 - WLAN, SSH (Kommunikation mit PC/MAC) und SPI (GPIO-Port-Steuerung) aktivieren
-#commandzeilen
 sudo raspi-config
-#unter 3 Interface Options -> I4: SPI enablen
-#unter 8 Update -> raspi-config aktualisieren
+- unter 3 Interface Options -> I4: SPI enablen
+- unter 8 Update -> raspi-config aktualisieren
 
 Wenn möglich fixe IP-Adresse im Netzwerk vergeben
 - Üblicherweise hat der Router des WLAN-Netzes eine Konfigurationsseite welche man über einen Browser erreichen kann (Bsp: [router.asus.com]([router.asus.com](http://router.asus.com/)). Über diese sollte es mittels Benutzeroberfläche möglich sein den Player zu finden und eine fixe IP zu vergeben (Bsp: Jür: 192.168.1.232, David: 192.168.1.231).
-
-
-
-
-```console
-foo@bar:~$ whoami
-foo
-```
 
 
 
