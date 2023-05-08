@@ -23,12 +23,12 @@ RFID-Scanner (Modul RC522):
 - RST -> GPIO23, Pin 16
 - 3,3V -> 3V3 power, Pin 17
 
-o) Lautstärkeregler und Ein-/Aus-Taster verkabeln
+Lautstärkeregler und Ein-/Aus-Taster verkabeln
 - Ein/Aus zwischen GPIO3 (Pin 5) und GND (Pin 6) 
 - Vol - zwischen GPIO26 (Pin 37) und GND (Pin 39)
 - Vol + zwischen GPIO16 (Pin 36) und GND (Pin 34)
 
-o) Wenn möglich Raspi via Router fixe IP zuweisen(DavidSpez) Raspi auf Asusrouter fixe IP im Netzwerk geben (momentan in unseres Jür: 192.168.1.232, David192.168.1.231)
+### Wenn möglich Raspi via Router fixe IP zuweisen(DavidSpez) Raspi auf Asusrouter fixe IP im Netzwerk geben (momentan in unseres Jür: 192.168.1.232, David192.168.1.231)
 
 o) WENN MÖGLICH: Bereits jetzt mit Putty zu IP des Raspberry verbinden und einloggen (falls noch kein Username vergeben wurde: default raspberry login ergoogeln), ansonsten mit Bildschirm und Tastatur verbinden (wenn man die IP-Adresse nicht vorher herausfinden kann)
 
