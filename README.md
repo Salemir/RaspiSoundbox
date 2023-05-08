@@ -56,7 +56,9 @@ raspi-config beenden
 ```console
 ifconfig
 ```
-Unter <b>WLAN0</b>
+Unter <b>WLAN0</b> befindet sich bei aktiver WLAN-Verbingung eine gültige IP-Adresse (Bsp: 192.168.1.231)
+
+Es macht Sinn, sich von nun an mit dem Freeware-Tool [Putty](https://putty.org/) mit dem Raspberry zu verbinden, dies kann jedoch auch zu späterem Zeitpunkt erfolgen. Verbindung kann entweder auf <b>hostname.local</b> (Hostname ersetzen durch geändertem Wert aus Installationsprozess) oder der IP-Adresse des Raspberry erfolgen. Wenn die Variante über IP-Adresse bevorzugt wird, sollte man gewährleisten, dass im Netzwerk für dieses Gerät eine fixe IP-Adresse vergeben wird.
 
 ### WENN Hostname, WiFi und SSH im Zuge des Installationsvorgangs bereits aktiviert wurden:
 - via SSH verbinden (mit Freeware [Putty](https://putty.org/); entweder auf IP-Adresse oder hostname.local verbinden; Hostname ersetzen durch geändertem Wert aus Installationsprozess)
