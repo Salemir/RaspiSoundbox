@@ -39,8 +39,9 @@ WENN Hostname, WiFi und SSH im Zuge des Installationsvorgangs nicht aktiviert wu
 - Installation abwarten
 - Raspi Auf Raspberry einloggen mit zuvor vergebenem Login (falls noch kein Username vergeben wurde: default raspberry login ergoogeln)
 - WLAN, SSH (Kommunikation mit PC/MAC) und SPI (GPIO-Port-Steuerung) aktivieren
-- #commandzeilen
+```console
 sudo raspi-config
+```
 #unter 1 System Settings -> S1: Wireless Lan konfigurieren
 #unter 1 System Settings -> S4: Hostname wählen ("Name" im Netzwerk)
 #unter 3 Interface Options -> I2: SSH enablen
@@ -65,7 +66,10 @@ Wenn möglich fixe IP-Adresse im Netzwerk vergeben
 
 
 
-
+```console
+foo@bar:~$ whoami
+foo
+```
 
 
 
