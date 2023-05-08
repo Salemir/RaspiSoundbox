@@ -1,7 +1,7 @@
 # RaspiSoundbox
 No Tonie, no Bullshit
 
-o) Image via Raspberry Pi Imager herunterladen und auf SD-Karte spielen (Stand 05.05.2023: Raspberry PI OS Lite 64-bit); bei Möglichkeit gleich SSH, WiFi, Tastaturlayout über Imager einrichten
+## Image via Raspberry Pi Imager herunterladen und auf SD-Karte spielen (Stand 05.05.2023: Raspberry PI OS Lite 64-bit); bei Möglichkeit gleich SSH, WiFi, Tastaturlayout über Imager einrichten
 Login momentan 
 User: david
 PW: wählbar
