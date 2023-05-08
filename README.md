@@ -28,7 +28,17 @@ Lautstärkeregler und Ein-/Aus-Taster verkabeln
 - Vol - zwischen GPIO26 (Pin 37) und GND (Pin 39)
 - Vol + zwischen GPIO16 (Pin 36) und GND (Pin 34)
 
-### Wenn möglich Raspi via Router fixe IP zuweisen(DavidSpez) Raspi auf Asusrouter fixe IP im Netzwerk geben (momentan in unseres Jür: 192.168.1.232, David192.168.1.231)
+## Raspberry in Betrieb nehmen
+Zuvor beschriebenen SD-Karte in den entsprechenden Slot stecken
+
+WENN WiFi und SSH nicht aktiviert wurden:
+- Tastatur anschließen
+- Monitor anschließen
+
+ Mit Netzteil verbinden (CAVE: mind. 1,5A-USB-Netzteil)
+
+## Wenn möglich fixe IP-Adresse im Netzwerk vergeben
+Üblicherweise hat der Router des WLAN-Netzes eine Konfigurationsseite welche man über einen Browser erreichen kann (Bsp: [router.asus.com]([router.asus.com](http://router.asus.com/)). Über diese sollte  Wenn möglich Raspi via Router fixe IP zuweisen(DavidSpez) Raspi auf Asusrouter fixe IP im Netzwerk geben (momentan in unseres Jür: 192.168.1.232, David: 192.168.1.231). Dies ist notwendig um den Raspberry zu konfigurieren.
 
 o) WENN MÖGLICH: Bereits jetzt mit Putty zu IP des Raspberry verbinden und einloggen (falls noch kein Username vergeben wurde: default raspberry login ergoogeln), ansonsten mit Bildschirm und Tastatur verbinden (wenn man die IP-Adresse nicht vorher herausfinden kann)
 
