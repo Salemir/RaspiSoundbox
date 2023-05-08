@@ -2,7 +2,7 @@
 No Tonie, no Bullshit
 
 ## Image auf SD-Karte spielen
-- via Raspberry Pi Imager herunterladen und auf SD-Karte spielen (Stand 05.05.2023: Raspberry PI OS Lite 64-bit)
+via Raspberry Pi Imager herunterladen und auf SD-Karte spielen (Stand 05.05.2023: Raspberry PI OS Lite 64-bit)
 - bei Möglichkeit gleich folgendes während Installation aktivieren:
 -- SSH, WiFi, Tastaturlayout über Imager einrichten
 Login momentan 
