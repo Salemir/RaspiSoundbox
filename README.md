@@ -32,27 +32,37 @@ Zuvor beschriebenen SD-Karte in den entsprechenden Slot stecken
 
 Mit Netzteil verbinden (CAVE: mind. 1,5A-USB-Netzteil)
 
-WENN WiFi und SSH im Zuge des Installationsvorgangs nicht aktiviert wurden:
+WENN Hostname, WiFi und SSH im Zuge des Installationsvorgangs nicht aktiviert wurden:
 - Tastatur anschließen
 - Monitor anschließen
 - Netzteil anschließen
 - Installation abwarten
 - Raspi Auf Raspberry einloggen mit zuvor vergebenem Login (falls noch kein Username vergeben wurde: default raspberry login ergoogeln)
+- WLAN, SSH (Kommunikation mit PC/MAC) und SPI (GPIO-Port-Steuerung) aktivieren
+- #commandzeilen
+sudo raspi-config
+#unter 1 System Settings -> S1: Wireless Lan konfigurieren
+#unter 1 System Settings -> S4: Hostname wählen ("Name" im Netzwerk)
+#unter 3 Interface Options -> I2: SSH enablen
+#unter 3 Interface Options -> I4: SPI enablen
+#unter 8 Update -> raspi-config aktualisieren
 
-WENN WiFi und SSH im Zuge des Installationsvorgangs bereits aktiviert wurden:
+
+
+ifconfig
+
+WENN Hostname, WiFi und SSH im Zuge des Installationsvorgangs bereits aktiviert wurden:
 - via SSH verbinden (mit Freeware [Putty](https://putty.org/); entweder auf IP-Adresse oder hostname.local verbinden; Hostname ersetzen durch geändertem Wert aus Installationsprozess)
+- WLAN, SSH (Kommunikation mit PC/MAC) und SPI (GPIO-Port-Steuerung) aktivieren
+#commandzeilen
+sudo raspi-config
+#unter 3 Interface Options -> I4: SPI enablen
+#unter 8 Update -> raspi-config aktualisieren
 
 Wenn möglich fixe IP-Adresse im Netzwerk vergeben
 - Üblicherweise hat der Router des WLAN-Netzes eine Konfigurationsseite welche man über einen Browser erreichen kann (Bsp: [router.asus.com]([router.asus.com](http://router.asus.com/)). Über diese sollte es mittels Benutzeroberfläche möglich sein den Player zu finden und eine fixe IP zu vergeben (Bsp: Jür: 192.168.1.232, David: 192.168.1.231).
 
-o) WLAN, SSH (Kommunikation mit PC/MAC) und SPI (GPIO-Port-Steuerung) aktivieren
-#Punkt S1 und I2 kann übersprungen werden wenn dies schon via Pi Imager erledigt wurde
-#commandzeilen
-sudo raspi-config
-#unter 1 System Options -> S1: Wireless Lan konfigurieren
-#unter 3 Interface Options -> I2: SSH enablen
-#unter 3 Interface Options -> I4: SPI enablen
-#unter 8 Update -> raspi-config aktualisieren
+
 
 
 
