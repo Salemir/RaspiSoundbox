@@ -42,15 +42,23 @@ WENN Hostname, WiFi und SSH im Zuge des Installationsvorgangs nicht aktiviert wu
 ```console
 sudo raspi-config
 ```
-#unter 1 System Settings -> S1: Wireless Lan konfigurieren
-#unter 1 System Settings -> S4: Hostname wählen ("Name" im Netzwerk)
-#unter 3 Interface Options -> I2: SSH enablen
-#unter 3 Interface Options -> I4: SPI enablen
-#unter 8 Update -> raspi-config aktualisieren
+1 System Settings -> S1: Wireless Lan konfigurieren
 
+1 System Settings -> S4: Hostname wählen ("Name" im Netzwerk)
 
+3 Interface Options -> I2: SSH enablen ("Fernzugriff" auf Terminal)
 
+3 Interface Options -> I4: SPI enablen (Steuerung via Taster ermöglichen)
+
+8 Update -> raspi-config aktualisieren
+
+raspi-config beenden
+
+Überprüfen der Verbindungseinstellungen
+```console
 ifconfig
+```
+unter 
 
 WENN Hostname, WiFi und SSH im Zuge des Installationsvorgangs bereits aktiviert wurden:
 - via SSH verbinden (mit Freeware [Putty](https://putty.org/); entweder auf IP-Adresse oder hostname.local verbinden; Hostname ersetzen durch geändertem Wert aus Installationsprozess)
