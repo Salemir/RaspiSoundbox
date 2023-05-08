@@ -1,0 +1,32 @@
+CardCheckPlay:
+1.7:
+Basisprogramm
+Karte muss runter genommen werden damit das Lied startet
+Warnungen, Programmhinweise und mpg123-Messages werden ausgeworfen
+Kein Delay bei Kartenauflegerei
+Stop erfolgt mittels 0,0s-MP3
+Karte und Key Stoppen Prozess statt Dummy-MP3 zu spielen (danach 2s Delay)
+1.9:
+Lied läuft bei abermalig aufgelegtem gleichen oder drauf bleibendem gleichen Chip fertig (bei "bleibt ganz drauf liegen bis Ende" startet es neu)
+Nur Warnungen werden ausgeworfen
+3s delay zwischen RFID-Lesevorgängen
+1.9.5:
+Variablen werden über CSV-Datei definiert
+2.0
+Tracks sind über trackverz.CSV den RFID zuordenbar (Lautstärkeänderung nur mit VolumeControl möglich)
+2.2:
+Lautstärkeänderung implementiert (Startvolume 90%, Änderungsschritte 5%; setzt bei Reboot wieder auf 90% zurück)
+AutoShutdown bei 3 Stunden nach Boot
+2.3:
+Weboberfläche implementiert
+
+
+
+
+
+
+
+
+VolumeControl (für Steuerung bis inkl. 2.0):
+1.1:
+Startvolume 90%, Änderungsschritte 5%; setzt bei Reboot wieder auf 90% zurück
