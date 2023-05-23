@@ -144,12 +144,15 @@ Auf Raspberry die IP-Adresse herausfinden
 ```console
 ifconfig
 ```
-Im Eintrag ``wlan0`` findet man die IP-Adresse. Hier am Beispiel von 192.168.1.231
+Im Eintrag ``wlan0`` findet man die IP-Adresse. Hier am Beispiel von ``192.168.1.231``:
 - In ExplorerArbeitsplatz/Dieser PC mit rechter Maustaste auf freie weiße Fläche klicken.
 - ``Netzwerkadresse hinzufügen`` wählen.
 - Benutzerdefinierte Adresse ``\\192.168.1.231\transfer`` einfügen
-- Weiter und Ordner sinnvoll benennen (Bsp: RaspiSoundbox Transfer)
-#MAC: HIERWEẞICHNOCHNICHTWIEDASGEHT
+- Weiter und Ordner sinnvoll benennen (Bsp: ``RaspiSoundbox Transfer``)
+
+Dateien aus Github-Ordnern ``/html/stable/`` und ``/python/stable/`` in die Raspberry-Ordner ``/transfer/html/stable/`` bzw. ``/transfer/python/stable/`` kopieren.
+#### WICHTIG: Alle Dateien aus den Github-Ordnern müssen in die Raspberry-Ordner kopiert werden. Ebenso müssen die Pfade exakt wie angegeben existieren.
+
 Daten von Backup auf OneDrive (Raspihörbuch\Daten_Backup XXXXXX vX.X) auf /transfer bringen
 
 o) Webserver aktivieren und NGINX/PHP konfigurieren:
