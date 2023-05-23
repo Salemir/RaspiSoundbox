@@ -170,7 +170,9 @@ Unter dem Eintrag ``listen = /run/php/php7.4-fpm.sock`` den Eintrag``listen = 90
 sudo nano /etc/nginx/sites-enabled/default
 ```
 Eintrag ``index.nginx-debian.html`` löschen, dafür ``index.php`` hinzufügen.
-Folgenden Zustand herstellen (bedeutet 4 Zeilen von RAUTE befreien)
+
+Ebenso ist folgender Zustand im File herzustellen (bedeutet 4 Zeilen von RAUTE befreien):
+
 >        location ~ \.php$ {  
 >                include snippets/fastcgi-php.conf;  
 >        #  
