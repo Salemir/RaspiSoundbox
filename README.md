@@ -99,16 +99,29 @@ sudo apt-get install python3-dev python3-pip mpg123
 sudo pip3 install spidev; sudo pip3 install mfrc522
 ```
 
-o) Samba Dateishare einrichten (Quelle: https://www.raspberry-buy.de/Raspberry_Pi_Tutorial_Windows_Dateifreigabe_Samba_SMB_Server_Installation.html)
-#commandzeilen
+## 6. Samba Dateishare einrichten
+Quelle: https://www.raspberry-buy.de/Raspberry_Pi_Tutorial_Windows_Dateifreigabe_Samba_SMB_Server_Installation.html
+```console
 sudo mkdir -m 0755 /scripts; sudo mkdir -m 1777 /transfer
+```
+```console
 sudo apt-get install samba samba-common-bin; sudo apt-get install samba samba-common smbclient
-sudo systemctl restart smbd
-sudo service smbd status
-#wenn "active (running)" in grün angezeigt wird ist alles im grünen Bereich
-#commandzeilen
+```
+```console
+sudo systemctl restart smbd; sudo service smbd status
+```
+Wenn "active (running)" in grün angezeigt wird ist alles im grünen Bereich
+```console
 sudo nano /etc/samba/smb.conf
-#in smb.conf ggf ändern von "workgroup = WORKGROUP" zu anderem Arbeitsgruppennamen (auf PC/MAC checken wie die Workgroup des Computers heißt)
+```
+Falls die Arbeitsgruppe des Netzwerkes in welches der Raspberry anders lautet als WORKGROUP, ist dies in folgender Configurationsdatei zu ändern:
+```console
+sudo nano smb.conf
+```
+ Der Eintrag der folgenden Zeile ist entsprechend anzupassen:
+ > workgroup = WORKGROUP
+
+
 #hinzufügen von folgendem Block ganz unten im File
 
 [transfer]
