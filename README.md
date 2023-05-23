@@ -156,12 +156,16 @@ Dateien aus Github-Ordnern ``/html/stable/`` und ``/python/stable/`` in die Rasp
 ## 7. Webserver aktivieren und NGINX/PHP konfigurieren
 Quelle: https://raspberrytips.com/nginx-on-raspberry-pi/  
 CAVE: ``7.4`` steht für die Version, kann sich also in zukünftigen Releases ändern
+
+#### NGINX und PHP installieren
+
 ```console
 sudo apt install nginx; sudo apt install php-fpm
 ```
 ```console
 sudo reboot
 ```
+#### NGINX und PHP konfigurieren
 ```console
 sudo nano /etc/php/7.4/fpm/pool.d/www.conf
 ```
