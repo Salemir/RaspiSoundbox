@@ -117,7 +117,7 @@ sudo nano /etc/samba/smb.conf
 ```console
 sudo nano smb.conf
 ```
-Hinzufügen von folgendem Block ganz unten im File
+#### Hinzufügen von folgendem Block ganz unten im File
 
 > [transfer]
 > comment = Für Übertragung von Scripts und sonstiger Daten auf den Raspi  
@@ -126,21 +126,19 @@ Hinzufügen von folgendem Block ganz unten im File
 > browseable = yes  
 > create mask = 1777
 
-#commandzeilen
+Falls die Arbeitsgruppe des Netzwerkes in welches der Raspberry anders lautet als WORKGROUP, ist dies ebenso in der Konfigurationsdatei smb.conf zu ändern. Der Eintrag der folgenden Zeile ist entsprechend anzupassen:
+ > workgroup = WORKGROUP
+
+#### Neustarten und Überprüfen der Services:
 ```console
 sudo systemctl restart smbd; sudo service smbd restart; sudo service nmbd restart; sudo service smbd status
 ```
+#### Passwort für den Dateizugriff via PC konfigurieren
 ```console
-sudo smbpasswd -a david
+sudo smbpasswd -a USERNAME
 ```
+"USERNAME" ist durchen einen aktiven/dem zuvor gewählten Benutzernamen zu ersetzen.
 
-#PASSWORTWÄHLEN
-sudo systemctl restart smbd
-sudo service smbd restart; sudo service nmbd restart
-sudo service smbd status
-
-Falls die Arbeitsgruppe des Netzwerkes in welches der Raspberry anders lautet als WORKGROUP, ist dies ebenso in der Konfigurationsdatei smb.conf zu ändern. Der Eintrag der folgenden Zeile ist entsprechend anzupassen:
- > workgroup = WORKGROUP
 
 
 
