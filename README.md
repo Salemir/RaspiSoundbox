@@ -153,11 +153,9 @@ Im Eintrag ``wlan0`` findet man die IP-Adresse. Hier am Beispiel von ``192.168.1
 Dateien aus Github-Ordnern ``/html/stable/`` und ``/python/stable/`` in die Raspberry-Ordner ``/transfer/html/stable/`` bzw. ``/transfer/python/stable/`` kopieren.
 #### WICHTIG: Alle Dateien aus den Github-Ordnern müssen in die Raspberry-Ordner kopiert werden. Ebenso müssen die Pfade exakt wie angegeben existieren.
 
-Daten von Backup auf OneDrive (Raspihörbuch\Daten_Backup XXXXXX vX.X) auf /transfer bringen
-
-o) Webserver aktivieren und NGINX/PHP konfigurieren:
-#https://raspberrytips.com/nginx-on-raspberry-pi/
-#7.4: das steht für die Version, kann sich also in zukünftigen Releases ändern
+## 7. Webserver aktivieren und NGINX/PHP konfigurieren
+Quelle: https://raspberrytips.com/nginx-on-raspberry-pi/  
+CAVE: ``7.4`` steht für die Version, kann sich also in zukünftigen Releases ändern
 #commandzeilen
 sudo apt install nginx; sudo apt install php-fpm
 sudo reboot
