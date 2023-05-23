@@ -94,6 +94,8 @@ sudo reboot
 ## 5. Python3 und mpg123 updaten/installieren
 ```console
 sudo apt-get install python3-dev python3-pip mpg123
+```
+```console
 sudo pip3 install spidev; sudo pip3 install mfrc522
 ```
 
