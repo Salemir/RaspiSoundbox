@@ -1,7 +1,7 @@
 # RaspiSoundbox
 No Tonie, no Bullshit
 
-## Image auf SD-Karte spielen
+## 1. Image auf SD-Karte spielen
 Image via [Raspberry Pi Imager](https://www.raspberrypi.com/software/) herunterladen und auf SD-Karte spielen (Stand 05.05.2023: Raspberry PI OS Lite 64-bit)
 
 Bei Möglichkeit während Installation gleich folgendes aktivieren/konfigurieren:
@@ -11,7 +11,7 @@ Bei Möglichkeit während Installation gleich folgendes aktivieren/konfigurieren
 - WiFi
 - Tastaturlayout
 
-## Verkabelung des RFID-Scanners und Taster:
+## 2. Verkabelung des RFID-Scanners und Taster:
 RFID-Scanner (Modul RC522):
 - SDA -> GPIO8, Pin 24
 - SCK -> GPIO11, Pin 23
@@ -27,12 +27,12 @@ Lautstärkeregler und Ein-/Aus-Taster verkabeln
 - Vol - zwischen GPIO26 (Pin 37) und GND (Pin 39)
 - Vol + zwischen GPIO16 (Pin 36) und GND (Pin 34)
 
-## Raspberry in Betrieb nehmen
+## 3. Raspberry in Betrieb nehmen
 Zuvor beschriebenen SD-Karte in den entsprechenden Slot stecken
 
 Mit Netzteil verbinden (CAVE: mind. 1,5A-USB-Netzteil)
 
-### WENN Hostname, WiFi und SSH im Zuge des Installationsvorgangs nicht aktiviert wurden:
+### 3.A WENN Hostname, WiFi und SSH im Zuge des Installationsvorgangs nicht aktiviert wurden (ansonsten weiter mit 3.B):
 - Tastatur und Monitor anschließen
 - Netzteil anschließen und Installationsvorgang abwarten
 - Auf Raspberry einloggen mit zuvor vergebenem Login (falls noch kein Username vergeben wurde: default raspberry login ergoogeln)
@@ -40,17 +40,12 @@ Mit Netzteil verbinden (CAVE: mind. 1,5A-USB-Netzteil)
 ```console
 sudo raspi-config
 ```
-1 System Settings -> S1: Wireless Lan konfigurieren
-
-1 System Settings -> S4: Hostname wählen ("Name" im Netzwerk)
-
-3 Interface Options -> I2: SSH enablen ("Fernzugriff" auf Terminal)
-
-3 Interface Options -> I4: SPI enablen (Steuerung via Taster ermöglichen)
-
-8 Update -> raspi-config aktualisieren
-
-raspi-config beenden
+- unter "1 System Settings -> S1": Wireless Lan konfigurieren
+- unter "1 System Settings -> S4": Hostname wählen ("Name" im Netzwerk)
+- unter "3 Interface Options -> I2": SSH enablen ("Fernzugriff" auf Terminal)
+- unter "3 Interface Options -> I4": SPI enablen (Steuerung via Taster ermöglichen)
+- unter "8 Update": raspi-config aktualisieren
+- raspi-config beenden
 
 Überprüfen der Verbindungseinstellungen
 ```console
@@ -58,12 +53,14 @@ ifconfig
 ```
 Unter <b>WLAN0</b> befindet sich bei aktiver WLAN-Verbingung eine gültige IP-Adresse (Bsp: 192.168.1.231)
 
-Es macht Sinn, sich von nun an mit dem Freeware-Tool [Putty](https://putty.org/) mit dem Raspberry zu verbinden, dies kann jedoch auch zu späterem Zeitpunkt erfolgen. Verbindung kann entweder auf <b>hostname.local</b> (Hostname ersetzen durch geändertem Wert aus Installationsprozess) oder der IP-Adresse des Raspberry erfolgen. Wenn die Variante über IP-Adresse bevorzugt wird, sollte man gewährleisten, dass im Netzwerk für dieses Gerät eine fixe IP-Adresse vergeben wird.
+Es macht Sinn, sich von nun an mit dem Freeware-Tool [Putty](https://putty.org/) mit dem Raspberry zu verbinden, dies ist jedoch optional und nur wegen Komfort empfohlen. Verbindung kann entweder auf <b>hostname.local</b> (Hostname ersetzen durch geändertem Wert aus Installationsprozess) oder der IP-Adresse des Raspberry erfolgen. Wenn die Variante über IP-Adresse bevorzugt wird, sollte man gewährleisten, dass im Netzwerk für dieses Gerät eine fixe IP-Adresse vergeben wird.
 
-### WENN Hostname, WiFi und SSH im Zuge des Installationsvorgangs bereits aktiviert wurden:
-- via SSH verbinden (mit Freeware [Putty](https://putty.org/); entweder auf IP-Adresse oder hostname.local verbinden; Hostname ersetzen durch geändertem Wert aus Installationsprozess)
+### 3.B WENN Hostname, WiFi und SSH im Zuge des Installationsvorgangs bereits aktiviert wurden:
+- mittels PC via SSH verbinden (mit Freeware [Putty](https://putty.org/); entweder auf IP-Adresse oder hostname.local verbinden; (Hostname ersetzen durch geändertem Wert aus Installationsprozess)
 - WLAN, SSH (Kommunikation mit PC/MAC) und SPI (GPIO-Port-Steuerung) aktivieren
+```console
 sudo raspi-config
+```
 - unter 3 Interface Options -> I4: SPI enablen
 - unter 8 Update -> raspi-config aktualisieren
 
