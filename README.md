@@ -4,7 +4,7 @@ No Tonie, no Bullshit
 ## 1. Image auf SD-Karte spielen
 Image via [Raspberry Pi Imager](https://www.raspberrypi.com/software/) herunterladen und auf SD-Karte spielen (Stand 05.05.2023: Raspberry PI OS Lite 64-bit)
 
-Bei Möglichkeit während Installation gleich folgendes aktivieren/konfigurieren:
+#### Bei Möglichkeit während Installation gleich folgendes aktivieren/konfigurieren:
 - Hostname (mit diesem kann dann via HOSTNAME.local die Konfigurationsseite des Geräts aufgerufen werden bzw. so kann via SSH auf Raspberry zugegriffen werden)
 - SSH
 - Benutzername & Passwort (Bsp: david, juer, etc.)
@@ -28,9 +28,8 @@ Bei Möglichkeit während Installation gleich folgendes aktivieren/konfigurieren
 - Vol + zwischen GPIO16 (Pin 36) und GND (Pin 34)
 
 ## 3. Raspberry in Betrieb nehmen
-Zuvor beschriebenen SD-Karte in den entsprechenden Slot stecken
-
-Mit Netzteil verbinden (CAVE: mind. 1,5A-USB-Netzteil)
+- Zuvor beschriebenen SD-Karte in den entsprechenden Slot stecken
+- Mit Netzteil verbinden (CAVE: mind. 1,5A-USB-Netzteil)
 
 ### 3.A WENN Hostname, WiFi und SSH im Zuge des Installationsvorgangs nicht aktiviert wurden (ansonsten weiter mit 3.B):
 - Tastatur und Monitor anschließen
@@ -47,7 +46,7 @@ sudo raspi-config
 - unter "8 Update": raspi-config aktualisieren
 - raspi-config beenden
 
-Überprüfen der Verbindungseinstellungen
+#### Überprüfen der Verbindungseinstellungen
 ```console
 ifconfig
 ```
@@ -56,7 +55,7 @@ Unter <b>WLAN0</b> befindet sich bei aktiver WLAN-Verbingung eine gültige IP-Ad
 Es macht Sinn, sich von nun an mit dem Freeware-Tool [Putty](https://putty.org/) mit dem Raspberry zu verbinden, dies ist jedoch optional und nur wegen Komfort empfohlen. Verbindung kann entweder auf <b>hostname.local</b> (Hostname ersetzen durch geändertem Wert aus Installationsprozess) oder der IP-Adresse des Raspberry erfolgen. Wenn die Variante über IP-Adresse bevorzugt wird, sollte man gewährleisten, dass im Netzwerk für dieses Gerät eine fixe IP-Adresse vergeben wird.
 
 ### 3.B WENN Hostname, WiFi und SSH im Zuge des Installationsvorgangs bereits aktiviert wurden:
-- mittels PC via SSH verbinden (mit Freeware [Putty](https://putty.org/); entweder auf IP-Adresse oder hostname.local verbinden; (Hostname ersetzen durch geändertem Wert aus Installationsprozess)
+- Mittels PC via SSH verbinden (mit Freeware [Putty](https://putty.org/); entweder auf IP-Adresse oder hostname.local verbinden; (Hostname ersetzen durch geändertem Wert aus Installationsprozess)
 - WLAN, SSH (Kommunikation mit PC/MAC) und SPI (GPIO-Port-Steuerung) aktivieren
 ```console
 sudo raspi-config
@@ -64,7 +63,7 @@ sudo raspi-config
 - unter 3 Interface Options -> I4: SPI enablen
 - unter 8 Update -> raspi-config aktualisieren
 
-Wenn möglich fixe IP-Adresse im Netzwerk vergeben
+#### Wenn möglich fixe IP-Adresse im Netzwerk vergeben
 - Üblicherweise hat der Router des WLAN-Netzes eine Konfigurationsseite welche man über einen Browser erreichen kann (Bsp: [router.asus.com]([router.asus.com](http://router.asus.com/)). Über diese sollte es mittels Benutzeroberfläche möglich sein den Player zu finden und eine fixe IP zu vergeben (Bsp: Jür: 192.168.1.232, David: 192.168.1.231).
 
 
