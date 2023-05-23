@@ -169,18 +169,16 @@ Unter dem Eintrag ``listen = /run/php/php7.4-fpm.sock`` den Eintrag``listen = 90
 ```console
 sudo nano /etc/nginx/sites-enabled/default
 ```
-``index.nginx-debian.html`` löschen, dafür ``index.php`` hinzufügen.
-
-
-#Weiters in /etc/nginx/sites-enabled/default folgenden Zustand herstellen (bedeutet 4 Zeilen von RAUTE befreien):
-        location ~ \.php$ {
-                include snippets/fastcgi-php.conf;
-        #
-        #       # With php-fpm (or other unix sockets):
-        #       fastcgi_pass unix:/run/php/php7.4-fpm.sock;
-        #       # With php-cgi (or other tcp sockets):
-                fastcgi_pass 127.0.0.1:9000;
-        }
+Eintrag ``index.nginx-debian.html`` löschen, dafür ``index.php`` hinzufügen.
+Folgenden Zustand herstellen (bedeutet 4 Zeilen von RAUTE befreien):
+>        location ~ \.php$ {  
+>                include snippets/fastcgi-php.conf;  
+>        #  
+>        #       # With php-fpm (or other unix sockets):  
+>        #       fastcgi_pass unix:/run/php/php7.4-fpm.sock;  
+>        #       # With php-cgi (or other tcp sockets):  
+>                fastcgi_pass 127.0.0.1:9000;  
+>        }
 
 #mögliche Uploaddateigröße in php.ini und nginx.conf ändern:
 sudo nano /etc/php/7.4/fpm/php.ini -> upload_max_filesize=200M UND post_max_size=201M
