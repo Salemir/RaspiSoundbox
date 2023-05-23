@@ -66,16 +66,18 @@ sudo raspi-config
 #### Wenn möglich fixe IP-Adresse im Netzwerk vergeben
 - Üblicherweise hat der Router des WLAN-Netzes eine Konfigurationsseite welche man über einen Browser erreichen kann (Bsp: [router.asus.com]([router.asus.com](http://router.asus.com/)). Über diese sollte es mittels Benutzeroberfläche möglich sein den Player zu finden und eine fixe IP zu vergeben (Bsp: Jür: 192.168.1.232, David: 192.168.1.231).
 
-
-
-
-o) On Off Button und AutoShutdown nach 3 Stunden enablen:
-#commandzeilen
+## Poweroptionen konfigurieren
+#### Nutzung des On-Off-Buttons ermöglichen:
+```console
 sudo nano /etc/systemd/logind.conf
-#Raute vor "HandlePowerKey=poweroff" löschen
+```
+Raute (#) vor Eintrag "HandlePowerKey=poweroff" löschen, danach speichern und schließen (üblicherweise mit STRG+X)
+```console
 sudo nano /boot/config.txt
-#einfügen von folgender Zeile unter "Additional overlays and parameters..."
+```
+Einfügen von folgender Zeile unter "Additional overlays and parameters..."
 dtoverlay=gpio-shutdown
+#### AutoShutdown nach 3 Stunden einstellen:
 #commandzeilen
 sudo nano /etc/rc.local
 #hinzufügen von folgender Zeile direkt über "exit 0"
