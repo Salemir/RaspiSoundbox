@@ -156,12 +156,23 @@ Dateien aus Github-Ordnern ``/html/stable/`` und ``/python/stable/`` in die Rasp
 ## 7. Webserver aktivieren und NGINX/PHP konfigurieren
 Quelle: https://raspberrytips.com/nginx-on-raspberry-pi/  
 CAVE: ``7.4`` steht für die Version, kann sich also in zukünftigen Releases ändern
-#commandzeilen
+```console
 sudo apt install nginx; sudo apt install php-fpm
+```
+```console
 sudo reboot
-sudo nano /etc/php/7.4/fpm/pool.d/www.conf -> listen = 9000 unter listen = /run/php/php7.4-fpm.sock dazuhauen
-sudo nano /etc/nginx/sites-enabled/default -> index.php dazuhauen, index.nginx-debian.html löschen
-#Weiters in ~/sites-enabled/default folgenden Zustand herstellen (bedeutet 4 Zeilen von RAUTE befreien):
+```
+```console
+sudo nano /etc/php/7.4/fpm/pool.d/www.conf
+```
+Unter dem Eintrag ``listen = /run/php/php7.4-fpm.sock`` den Eintrag``listen = 9000`` hinzufügen.
+```console
+sudo nano /etc/nginx/sites-enabled/default
+```
+``index.nginx-debian.html`` löschen, dafür ``index.php`` hinzufügen.
+
+
+#Weiters in /etc/nginx/sites-enabled/default folgenden Zustand herstellen (bedeutet 4 Zeilen von RAUTE befreien):
         location ~ \.php$ {
                 include snippets/fastcgi-php.conf;
         #
