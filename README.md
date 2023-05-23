@@ -71,12 +71,16 @@ sudo raspi-config
 ```console
 sudo nano /etc/systemd/logind.conf
 ```
-Raute (#) vor Eintrag "HandlePowerKey=poweroff" löschen, danach speichern und schließen (üblicherweise mit STRG+X)
+Raute (#) vor folgendem Eintrag löschen
+> HandlePowerKey=poweroff
+
+Danach das File speichern und schließen. Dies erfolgt üblicherweise mit STRG+X -> Y
 ```console
 sudo nano /boot/config.txt
 ```
 Einfügen von folgender Zeile unter "Additional overlays and parameters..."
-dtoverlay=gpio-shutdown
+> dtoverlay=gpio-shutdown
+
 #### AutoShutdown nach 3 Stunden einstellen:
 #commandzeilen
 sudo nano /etc/rc.local
