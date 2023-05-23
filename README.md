@@ -12,7 +12,7 @@ Bei Möglichkeit während Installation gleich folgendes aktivieren/konfigurieren
 - Tastaturlayout
 
 ## 2. Verkabelung des RFID-Scanners und Taster:
-RFID-Scanner (Modul RC522):
+#### RFID-Scanner (Modul RC522) anschließen:
 - SDA -> GPIO8, Pin 24
 - SCK -> GPIO11, Pin 23
 - MOSI -> GPIO10, Pin 19
@@ -22,7 +22,7 @@ RFID-Scanner (Modul RC522):
 - RST -> GPIO23, Pin 16
 - 3,3V -> 3V3 power, Pin 17
 
-Lautstärkeregler und Ein-/Aus-Taster verkabeln
+#### Lautstärkeregler und Ein-/Aus-Taster anschließen:
 - Ein/Aus zwischen GPIO3 (Pin 5) und GND (Pin 6) 
 - Vol - zwischen GPIO26 (Pin 37) und GND (Pin 39)
 - Vol + zwischen GPIO16 (Pin 36) und GND (Pin 34)
