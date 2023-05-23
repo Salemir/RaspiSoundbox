@@ -200,10 +200,17 @@ sudo service nginx restart; sudo service nginx status
 ```
 
 
+
+
+
+
+
+
+
+
 #user david der Gruppe www-data hinzufügen:
 #commandzeilen
 sudo usermod -a -G www-data david
-sudo chown -R www-data:www-data /var/www/html/raspitracks
 
 o) Weboberfläche vorbereiten
 #commandzeilen
