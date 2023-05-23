@@ -139,12 +139,16 @@ sudo smbpasswd -a USERNAME
 ```
 "USERNAME" ist durchen einen aktiven/dem zuvor gewählten Benutzernamen zu ersetzen.
 
-#### Auf pc/mac den Ordner /transfer als Ordner im Finder oder Explorer hinzufügen
+#### Auf PC den Ordner /transfer im Windows Explorer hinzufügen
+Auf Raspberry die IP-Adresse herausfinden
 ```console
 ifconfig
 ```
-Im Eintrag ``wlan0``: ip-Adresse suchen und aufschreiben
-#David: \\192.168.1.231\transfer -> IP Adresse je nach Ergebnis von ifconfig ändern bei Bedarf
+Im Eintrag ``wlan0`` findet man die IP-Adresse. Hier am Beispiel von 192.168.1.231
+- In ExplorerArbeitsplatz/Dieser PC mit rechter Maustaste auf freie weiße Fläche klicken.
+- ``Netzwerkadresse hinzufügen`` wählen.
+- Benutzerdefinierte Adresse ``\\192.168.1.231\transfer`` einfügen
+- Weiter und Ordner sinnvoll benennen (Bsp: RaspiSoundbox Transfer)
 #MAC: HIERWEẞICHNOCHNICHTWIEDASGEHT
 Daten von Backup auf OneDrive (Raspihörbuch\Daten_Backup XXXXXX vX.X) auf /transfer bringen
 
