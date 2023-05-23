@@ -128,7 +128,6 @@ Hinzufügen von folgendem Block ganz unten im File
 
 
 
-
 #commandzeilen
 sudo systemctl restart smbd
 sudo service smbd restart; sudo service nmbd restart
