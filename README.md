@@ -114,22 +114,20 @@ Wenn "active (running)" in grün angezeigt wird ist alles im grünen Bereich
 ```console
 sudo nano /etc/samba/smb.conf
 ```
-Falls die Arbeitsgruppe des Netzwerkes in welches der Raspberry anders lautet als WORKGROUP, ist dies in folgender Configurationsdatei zu ändern:
 ```console
 sudo nano smb.conf
 ```
- Der Eintrag der folgenden Zeile ist entsprechend anzupassen:
- > workgroup = WORKGROUP
+Hinzufügen von folgendem Block ganz unten im File
+
+> [transfer]
+> comment = Für Übertragung von Scripts und sonstiger Daten auf den Raspi
+> path = /transfer
+> read only = no
+> browseable = yes
+> create mask = 1777
 
 
-#hinzufügen von folgendem Block ganz unten im File
 
-[transfer]
-comment = Für Übertragung von Scripts und sonstiger Daten auf den Raspi
-path = /transfer
-read only = no
-browseable = yes
-create mask = 1777
 
 #commandzeilen
 sudo systemctl restart smbd
@@ -140,6 +138,11 @@ sudo smbpasswd -a david
 sudo systemctl restart smbd
 sudo service smbd restart; sudo service nmbd restart
 sudo service smbd status
+
+Falls die Arbeitsgruppe des Netzwerkes in welches der Raspberry anders lautet als WORKGROUP, ist dies ebenso in der Konfigurationsdatei smb.conf zu ändern. Der Eintrag der folgenden Zeile ist entsprechend anzupassen:
+ > workgroup = WORKGROUP
+
+
 
 o) auf pc/mac Netzwerkadressen von /transfer als Ordner im Finder oder Dieser PC hinzufügen
 #commandzeilen
