@@ -139,13 +139,11 @@ sudo smbpasswd -a USERNAME
 ```
 "USERNAME" ist durchen einen aktiven/dem zuvor gewählten Benutzernamen zu ersetzen.
 
-
-
-
-o) auf pc/mac Netzwerkadressen von /transfer als Ordner im Finder oder Dieser PC hinzufügen
-#commandzeilen
+#### Auf pc/mac den Ordner /transfer als Ordner im Finder oder Explorer hinzufügen
+```console
 ifconfig
-#unter wlan0: ip-Adresse suchen und aufschreiben
+```
+Im Eintrag ``wlan0``: ip-Adresse suchen und aufschreiben
 #David: \\192.168.1.231\transfer -> IP Adresse je nach Ergebnis von ifconfig ändern bei Bedarf
 #MAC: HIERWEẞICHNOCHNICHTWIEDASGEHT
 Daten von Backup auf OneDrive (Raspihörbuch\Daten_Backup XXXXXX vX.X) auf /transfer bringen
