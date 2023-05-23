@@ -66,7 +66,7 @@ sudo raspi-config
 #### Wenn möglich fixe IP-Adresse im Netzwerk vergeben
 - Üblicherweise hat der Router des WLAN-Netzes eine Konfigurationsseite welche man über einen Browser erreichen kann (Bsp: [router.asus.com]([router.asus.com](http://router.asus.com/)). Über diese sollte es mittels Benutzeroberfläche möglich sein den Player zu finden und eine fixe IP zu vergeben (Bsp: Jür: 192.168.1.232, David: 192.168.1.231).
 
-## Poweroptionen konfigurieren
+## 4. Poweroptionen konfigurieren
 #### Nutzung des On-Off-Buttons ermöglichen:
 ```console
 sudo nano /etc/systemd/logind.conf
@@ -82,19 +82,20 @@ Einfügen von folgender Zeile unter "Additional overlays and parameters..."
 > dtoverlay=gpio-shutdown
 
 #### AutoShutdown nach 3 Stunden einstellen:
-#commandzeilen
+```console
 sudo nano /etc/rc.local
-#hinzufügen von folgender Zeile direkt über "exit 0"
-(sleep 10800 && sudo poweroff) &
+```
+Hinzufügen von folgender Zeile direkt über "exit 0"
+> (sleep 10800 && sudo poweroff) &
+```console
 sudo reboot
+```
 
-o) Via Terminal verbinden
-#mit Freeware Putty
-
-o) Python3 und mpg123 updaten/installieren
-#commandzeilen
+## 5. Python3 und mpg123 updaten/installieren
+```console
 sudo apt-get install python3-dev python3-pip mpg123
 sudo pip3 install spidev; sudo pip3 install mfrc522
+```
 
 o) Samba Dateishare einrichten (Quelle: https://www.raspberry-buy.de/Raspberry_Pi_Tutorial_Windows_Dateifreigabe_Samba_SMB_Server_Installation.html)
 #commandzeilen
