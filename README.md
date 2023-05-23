@@ -121,13 +121,9 @@ Hinzufügen von folgendem Block ganz unten im File
 
 > [transfer]
 > comment = Für Übertragung von Scripts und sonstiger Daten auf den Raspi
->
 > path = /transfer
-> 
 > read only = no
-> 
-> browseable = yes
-> 
+> browseable = yes  
 > create mask = 1777
 
 
