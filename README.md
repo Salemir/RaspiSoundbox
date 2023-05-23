@@ -126,13 +126,14 @@ Hinzufügen von folgendem Block ganz unten im File
 > browseable = yes  
 > create mask = 1777
 
-
-
 #commandzeilen
-sudo systemctl restart smbd
-sudo service smbd restart; sudo service nmbd restart
-sudo service smbd status
+```console
+sudo systemctl restart smbd; sudo service smbd restart; sudo service nmbd restart; sudo service smbd status
+```
+```console
 sudo smbpasswd -a david
+```
+
 #PASSWORTWÄHLEN
 sudo systemctl restart smbd
 sudo service smbd restart; sudo service nmbd restart
