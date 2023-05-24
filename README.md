@@ -211,7 +211,6 @@ sudo usermod -a -G www-data USERNAME
 
 
 
-
 o) 
 #commandzeilen
 sudo rm /var/www/html/index.nginx-debian.html
