@@ -12,7 +12,7 @@ Image via [Raspberry Pi Imager](https://www.raspberrypi.com/software/) herunterl
 - Tastaturlayout
 
 ## 2. Verkabelung des RFID-Scanners und Taster:
-Ein Schaltplan der Pins auf dem Raspberry findet sich im File [GPIO Raspberry.png]([``GIPO Raspberry.png``](https://github.com/Salemir/RaspiSoundbox/blob/main/GPIO%20Raspberry.png)
+Ein Schaltplan der Pins auf dem Raspberry findet sich im File [GPIO Raspberry.png](https://github.com/Salemir/RaspiSoundbox/blob/main/GPIO%20Raspberry.png)
 
 #### RFID-Scanner (Modul RC522) anschließen:
 - SDA -> GPIO8, Pin 24
