@@ -224,8 +224,11 @@ Die Datei ``trackverz.CSV`` zuerst auf einem PC bearbeiten (RFID-Nummern der jew
 #### RFIDs lesen
 Um RFID-Sticker/Karten/etc. zu lesen kann das ein spezielles Programm im Terminal aufgerufen werden:
 ```console
-sudo python3 /transfer/python/stable/
+sudo python3 /transfer/python/stable/Lesegeraet_1.5.py
 ```
+RFID-Tags können nacheinander aufgelegt werden, die RFID-Nummern werden nacheinander im Terminal angezeigt. Diese können für die Zuweisung direkt in die Weboberfläche wie oben beschrieben eingetragen werden. Selbstverständlich ist es möglich, die Datei ``trackverz.CSV`` direkt am PC gänzlich zu befüllen und diese über die Weboberfläche hochzuladen.
+
+Das Programm lässt sich mit der Tastenkombination STRG+C beenden.
 
 ## 9. Player konfigurieren
 Wie bereits zuvor geschrieben, die Dateistrukturen müssen wie angegeben existieren und die jeweiligen Dateien in diesen Strukturen abgelegt sein.
