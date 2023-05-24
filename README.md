@@ -129,6 +129,7 @@ sudo nano smb.conf
 
 Falls die Arbeitsgruppe des Netzwerkes in welches der Raspberry anders lautet als WORKGROUP, ist dies ebenso in der Konfigurationsdatei smb.conf zu ändern. Der Eintrag der folgenden Zeile ist entsprechend anzupassen:
  > workgroup = WORKGROUP
+
 File speichern und schließen. (STRG+X -> Y)
 #### Neustarten und Überprüfen der Services:
 ```console
@@ -193,11 +194,13 @@ File speichern und schließen. (STRG+X -> Y)
 sudo nano /etc/php/7.4/fpm/php.ini
 ```
 Werte zu ``upload_max_filesize=200M`` und ``post_max_size=201M`` ändern.
+
 File speichern und schließen. (STRG+X -> Y)
 ```console
 sudo nano /etc/nginx/nginx.conf
 ```
 Zeile ``client_max_body_size 200M;`` unter http-Sektion (bspw. unter Zeile  ``# server_name_in_redirect off;``) hinzufügen.
+
 File speichern und schließen. (STRG+X -> Y)
 ```console
 sudo service nginx restart; sudo service nginx status
