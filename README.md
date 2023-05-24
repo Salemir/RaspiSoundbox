@@ -74,7 +74,7 @@ sudo nano /etc/systemd/logind.conf
 Raute (#) vor folgendem Eintrag löschen
 > HandlePowerKey=poweroff
 
-Danach das File speichern und schließen. Dies erfolgt üblicherweise mit STRG+X -> Y
+File speichern und schließen. Dies erfolgt üblicherweise mit STRG+X -> Y
 ```console
 sudo nano /boot/config.txt
 ```
@@ -128,7 +128,7 @@ sudo nano smb.conf
 
 Falls die Arbeitsgruppe des Netzwerkes in welches der Raspberry anders lautet als WORKGROUP, ist dies ebenso in der Konfigurationsdatei smb.conf zu ändern. Der Eintrag der folgenden Zeile ist entsprechend anzupassen:
  > workgroup = WORKGROUP
-
+File speichern und schließen. (STRG+X -> Y)
 #### Neustarten und Überprüfen der Services:
 ```console
 sudo systemctl restart smbd; sudo service smbd restart; sudo service nmbd restart; sudo service smbd status
@@ -185,34 +185,34 @@ Ebenso ist folgender Zustand im File herzustellen (bedeutet 4 Zeilen von RAUTE b
 >        #       # With php-cgi (or other tcp sockets):  
 >                fastcgi_pass 127.0.0.1:9000;  
 >        }
+File speichern und schließen. (STRG+X -> Y)
 
 #### Mögliche Uploaddateigrößen definieren
 ```console
 sudo nano /etc/php/7.4/fpm/php.ini
 ```
 Werte zu ``upload_max_filesize=200M`` und ``post_max_size=201M`` ändern.
+File speichern und schließen. (STRG+X -> Y)
 ```console
 sudo nano /etc/nginx/nginx.conf
 ```
 Zeile ``client_max_body_size 200M;`` unter http-Sektion (bspw. unter Zeile  ``# server_name_in_redirect off;``) hinzufügen.
+File speichern und schließen. (STRG+X -> Y)
 ```console
 sudo service nginx restart; sudo service nginx status
 ```
+#### Hauptuser der Gruppe www-data hinzufügen
+```console
+sudo usermod -a -G www-data USERNAME
+```
+"USERNAME" ist durchen einen aktiven/dem zuvor gewählten Benutzernamen zu ersetzen.
+
+## 8. Weboberfläche vorbereiten
 
 
 
 
-
-
-
-
-
-
-#user david der Gruppe www-data hinzufügen:
-#commandzeilen
-sudo usermod -a -G www-data david
-
-o) Weboberfläche vorbereiten
+o) 
 #commandzeilen
 sudo rm /var/www/html/index.nginx-debian.html
 sudo cp -r /transfer/html/stable/* /var/www/html/
