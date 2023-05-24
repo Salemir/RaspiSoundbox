@@ -154,8 +154,7 @@ Im Eintrag ``wlan0`` findet man die IP-Adresse. Hier am Beispiel von ``192.168.1
 - Benutzerdefinierte Adresse ``\\192.168.1.231\transfer`` einfügen
 - Weiter und Ordner sinnvoll benennen (Bsp: ``RaspiSoundbox Transfer``)
 
-Dateien aus Github-Ordnern ``/html/stable/`` und ``/python/stable/`` in die Raspberry-Ordner ``/transfer/html/stable/`` bzw. ``/transfer/python/stable/`` kopieren.
-#### WICHTIG: Alle Dateien aus den Github-Ordnern müssen in die Raspberry-Ordner kopiert werden. Ebenso müssen die Pfade exakt wie angegeben existieren.
+#### WICHTIG: Alle Dateien aus dem Github-Ordner inklusive Unterordner sollten direkt den erstellten ``/transfer``-Ordner auf dem Raspberry kopiert werden. Ebenso müssen die Pfade exakt wie angegeben beibehalten werden.
 
 ## 7. Webserver aktivieren und NGINX/PHP konfigurieren
 Quelle: https://raspberrytips.com/nginx-on-raspberry-pi/  
@@ -221,6 +220,12 @@ Unter ``/var/www/html`` befindet sich die Dateiablage für die Website der Playe
 
 #### Trackverzeichnis implementieren
 Die Datei ``trackverz.CSV`` zuerst auf einem PC bearbeiten (RFID-Nummern der jeweiligen Sticker/Karten/etc. eintragen und mit Kommentar versehen) über den Uploadbutton der Weboberfläche des Raspberrys uploaden und auf Upload/Refresh klicken.
+
+#### RFIDs lesen
+Um RFID-Sticker/Karten/etc. zu lesen kann das ein spezielles Programm im Terminal aufgerufen werden:
+```console
+sudo python3 /transfer/python/stable/
+```
 
 ## 9. Player konfigurieren
 Wie bereits zuvor geschrieben, die Dateistrukturen müssen wie angegeben existieren und die jeweiligen Dateien in diesen Strukturen abgelegt sein.
