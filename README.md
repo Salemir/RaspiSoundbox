@@ -80,7 +80,7 @@ sudo nano /boot/config.txt
 ```
 Einfügen von folgender Zeile unter "Additional overlays and parameters..."
 > dtoverlay=gpio-shutdown
-
+File speichern und schließen. (STRG+X -> Y)
 #### AutoShutdown nach 3 Stunden einstellen:
 ```console
 sudo nano /etc/rc.local
@@ -90,7 +90,7 @@ Hinzufügen von folgender Zeile direkt über "exit 0"
 ```console
 sudo reboot
 ```
-
+File speichern und schließen. (STRG+X -> Y)
 ## 5. Python3 und mpg123 updaten/installieren
 ```console
 sudo apt-get install python3-dev python3-pip mpg123
