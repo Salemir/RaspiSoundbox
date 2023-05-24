@@ -80,6 +80,7 @@ sudo nano /boot/config.txt
 ```
 Einfügen von folgender Zeile unter "Additional overlays and parameters..."
 > dtoverlay=gpio-shutdown
+
 File speichern und schließen. (STRG+X -> Y)
 #### AutoShutdown nach 3 Stunden einstellen:
 ```console
