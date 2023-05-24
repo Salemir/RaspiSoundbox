@@ -211,55 +211,75 @@ sudo usermod -a -G www-data USERNAME
 ```
 "USERNAME" ist durchen einen aktiven/dem zuvor gewählten Benutzernamen zu ersetzen.
 
-## 8. Weboberfläche vorbereiten
+## 8. Weboberfläche vorbereiten und Erstkonfiguration durchführen
+```console
+sudo rm /var/www/html/index.nginx-debian.html; sudo cp -r /transfer/html/stable/* /var/www/html/; sudo mkdir -m 1777 /var/www/html/raspitracks; sudo chown -R www-data:www-data /var/www/html/raspitracks
+```
+Unter ``/var/www/html`` befindet sich die Dateiablage für die Website der Player-Verwaltung (Trackzuordnung, Tracklöschung, etc.). Durch einen Aufruf der IP.AD.RE.SSE oder HOSTNAME.local (HOSTNAME wurde am Anfang dieses Tutorials definiert) auf einem Browser eines Geräts im gleichen Netzwerk erreicht man die Playerverwaltung.
 
+#### Trackverzeichnis implementieren
+Die Datei ``trackverz.CSV`` über den Uploadbutton der Weboberfläche des Raspberrys uploaden und auf Upload/Refresh klicken.
 
+## 9. Player konfigurieren
+Wie bereits zuvor geschrieben, die Dateistrukturen müssen wie angegeben existieren und die jeweiligen Dateien in diesen Strukturen abgelegt sein.
+```console
+sudo cp /transfer/python/stable/CardCheckPlay_stable.py /scripts; sudo crontab -e
+```
+Hier ist die Aktion ``nano`` zu wählen. Um den Autostart zu aktivieren ist folgende Zeile ganz unten im File hinzuzufügen:
+> @reboot python3 /scripts/CardCheckPlay_stable.py &
 
-o) 
-#commandzeilen
-sudo rm /var/www/html/index.nginx-debian.html
-sudo cp -r /transfer/html/stable/* /var/www/html/
-sudo mkdir -m 1777 /var/www/html/raspitracks
-sudo chown -R www-data:www-data /var/www/html/raspitracks
-sudo rm /var/www/html/index.nginx-debian.html
-#unter /var/www/html befindet sich das Root-Verzeichnis der Website; mit IP.AD.RE.SSE im Browser kommt man auf IP.AD.RE.SSE/index.html
-#trackverz.CSV über Weboberfläche in /raspitracks laden (mittels Upload)
-
-o) Player-Scriptauf Raspi bringen und Autostart aktivieren
-#stabiles Wiedergabescript muss wie folgt abgelegt sein: /transfer/python/stable/CardCheckPlay_stable.py
-#commandzeilen
-sudo cp /transfer/python/stable/CardCheckPlay_stable.py /scripts
-sudo crontab -e
-#option „nano“ wählen
-#für aktivieren des Scripts bei Boot folgende Zeile ganz unten hinzufügen und speichern (so aktiviert man den Autostart des Scripts)
-@reboot python3 /scripts/CardCheckPlay_stable.py &
-#commandzeilen
+File speichern und schließen. (STRG+X -> Y)
+```console
 sudo reboot 
+```
 
-o) Alles auf Raspi aktualisieren
-#commandzeilen
+## 10. System aktualisieren
+```console
 sudo apt-get update; sudo apt-get upgrade; sudo apt-get dist-upgrade
+```
+```console
+sudo reboot 
+```
 
-o) Inbetriebnahme
-#Lieder via Weboberfläche hochladen
-#Liedernamen (inklusive .mp3) den Stickern zuordnen
+## 11. Inbetriebnahme
+- Lieder via Weboberfläche (erreichbar über IP.AD.RE.SSE oder HOSTNAME.local mit einem Browser auf einem Gerät im selben Netzwerk) hochladen. CAVE: Nach letztem Track ist nochmals ein Klick auf den "Upload/Refresh"-Button notwendig.
+- Um konkrete Zuweisungen der Tracks zu den RFID-Stickern herzustellen ist der Trackname (inklusive .mp3) in das jeweilige Feld im linken Bereich der Website einzutragen. Am Ende der Liste findet sich der Button ``Änderungen speichern``.
 
 
-Service und Updates
-o) laufende HTML/PHP-Files liegen auf /var/www/html/
-o) Extrahieren von Produktivfiles für Manipulation:
-#commandzeilen
-sudo cp /var/www/html/index.php /transfer/html/beta/; sudo cp /var/www/html/update_csv.php /transfer/html/beta/
-#herumspielen und speichern
-o) Returnieren von Testfiles nach erfolgter Manipulation:
-#commandzeilen
-sudo cp /transfer/html/beta/index.php /var/www/html/; sudo cp /transfer/html/beta/update_csv.php /var/www/html/
-o) Versionshistorie unter /transfer/versionsinfo.txt
-o) Update von Python-Script: ChardCheckPlay_stable.py aktualisieren und in /scripts kopieren 
-#commandzeilen
-sudo cp /transfer/python/stable/CardCheckPlay_stable.py /scripts
-o) letzte Version 2.3
-o) BEI MANIPULATION VON CardCheckPlay_stable.py zuerst laufenden Prozess beenden mit folgenden
-#commandzeilen
+## Z. Service und Updates
+
+#### Update der Programme
+
+Um die konkreten Dateien upzudaten müssen die Dateien welche Vorversionen ersetzen sollen wie folgt abgelegt werden:
+- Website-Files: ``/transfer/html/stable/index.php`` und ``/transfer/html/stable//update_csv.php``
+- Player-File: ``/transfer/python/stable/CardCheckPlay_stable.py``
+
+Um die Dateien an die jeweiligen Stellen auf dem Raspberry zu kopieren/diese upzudaten können folgende Befehle verwendet werden:
+- Website-Files:
+```console
+sudo cp /transfer/html/stable/index.php /var/www/html/; sudo cp /transfer/html/stable/update_csv.php /var/www/html/
+```
+- Player-File:
+- CAVE: Um ein sauberes Update durchzuführen muss der Prozess zuerst beendet werden. Dies erfolgt mit foldenden Terminal-Befehlen:
+```console
 ps aux | grep python3
-sudo kill NUMMERNACHUSERVOMLAUFENDENZUKILLENDENSCRIPT
+```
+```console
+sudo kill ENTSPRECHENDEPROZESSNUMMERVONCARDCHECHPLAY.....
+```
+Das konkrete Update des Players wird mit folgendem Befehl ausgeführt:
+```console
+sudo cp /transfer/python/stable/CardCheckPlay_stable.py /scripts
+```
+
+#### Extrahieren von Files für Manipulation/Troubleshooting:
+- Websites-Files:
+```console
+sudo cp /var/www/html/index.php /transfer/html/beta/; sudo cp /var/www/html/update_csv.php /transfer/html/beta/
+```
+- Player-File:
+```console
+sudo cp /scripts/index.php /transfer/html/beta/
+```
+
+#### Die Versionshistorie findet sich im File Versionsinfo.txt
