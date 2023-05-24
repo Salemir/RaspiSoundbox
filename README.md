@@ -12,6 +12,9 @@ Image via [Raspberry Pi Imager](https://www.raspberrypi.com/software/) herunterl
 - Tastaturlayout
 
 ## 2. Verkabelung des RFID-Scanners und Taster:
+
+Ein Schaltplan der Pins auf dem Raspberry findet sich im File ``GIPO Raspberry.png``
+
 #### RFID-Scanner (Modul RC522) anschließen:
 - SDA -> GPIO8, Pin 24
 - SCK -> GPIO11, Pin 23
@@ -218,7 +221,7 @@ sudo rm /var/www/html/index.nginx-debian.html; sudo cp -r /transfer/html/stable/
 Unter ``/var/www/html`` befindet sich die Dateiablage für die Website der Player-Verwaltung (Trackzuordnung, Tracklöschung, etc.). Durch einen Aufruf der IP.AD.RE.SSE oder HOSTNAME.local (HOSTNAME wurde am Anfang dieses Tutorials definiert) auf einem Browser eines Geräts im gleichen Netzwerk erreicht man die Playerverwaltung.
 
 #### Trackverzeichnis implementieren
-Die Datei ``trackverz.CSV`` über den Uploadbutton der Weboberfläche des Raspberrys uploaden und auf Upload/Refresh klicken.
+Die Datei ``trackverz.CSV`` zuerst auf einem PC bearbeiten (RFID-Nummern der jeweiligen Sticker/Karten/etc. eintragen und mit Kommentar versehen) über den Uploadbutton der Weboberfläche des Raspberrys uploaden und auf Upload/Refresh klicken.
 
 ## 9. Player konfigurieren
 Wie bereits zuvor geschrieben, die Dateistrukturen müssen wie angegeben existieren und die jeweiligen Dateien in diesen Strukturen abgelegt sein.
@@ -284,4 +287,4 @@ sudo cp /var/www/html/index.php /transfer/html/beta/; sudo cp /var/www/html/upda
 sudo cp /scripts/index.php /transfer/html/beta/
 ```
 
-### Die Versionshistorie findet sich im File Versionsinfo.txt
+### Die Versionshistorie findet sich im File versionsinfo.txt
