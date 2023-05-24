@@ -210,7 +210,7 @@ sudo service nginx restart; sudo service nginx status
 ```console
 sudo usermod -a -G www-data USERNAME
 ```
-"USERNAME" ist durchen einen aktiven/dem zuvor gewählten Benutzernamen zu ersetzen.
+"USERNAME" ist durch einen aktiven/dem zuvor gewählten Benutzernamen zu ersetzen.
 
 ## 8. Weboberfläche vorbereiten und Erstkonfiguration durchführen
 ```console
@@ -277,7 +277,7 @@ sudo cp /transfer/html/stable/index.php /var/www/html/; sudo cp /transfer/html/s
 ps aux | grep python3
 ```
 ```console
-sudo kill ENTSPRECHENDEPROZESSNUMMERVONCARDCHECHPLAY.....
+sudo kill ENTSPRECHENDEPROZESSNUMMERVONCARDCHECHPLAY_STABLE.PY
 ```
 Das konkrete Update des Players wird mit folgendem Befehl ausgeführt:
 ```console
@@ -285,6 +285,8 @@ sudo cp /transfer/python/stable/CardCheckPlay_stable.py /scripts
 ```
 
 ### Extrahieren von Files für Manipulation/Troubleshooting:
+Mit diesen Befehlen werden die Dateien in den Ordner ``/transfer/html/beta/`` bzw. ``transfer/python/beta`` kopiert.
+
 - Websites-Files:
 ```console
 sudo cp /var/www/html/index.php /transfer/html/beta/; sudo cp /var/www/html/update_csv.php /transfer/html/beta/
