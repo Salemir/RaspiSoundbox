@@ -5,7 +5,7 @@ No Tonie, no Bullshit
 Image via [Raspberry Pi Imager](https://www.raspberrypi.com/software/) herunterladen und auf SD-Karte spielen (Stand 05.05.2023: Raspberry PI OS Lite 64-bit)
 
 #### Bei Möglichkeit während Installation gleich folgendes aktivieren/konfigurieren:
-- Hostname (mit diesem kann dann via HOSTNAME.local die Konfigurationsseite des Geräts aufgerufen werden bzw. so kann via SSH auf Raspberry zugegriffen werden)
+- Hostname (mit diesem kann zu späterem Zeitpunkt via HOSTNAME.local die Konfigurationsseite des Geräts aufgerufen werden bzw. so kann via SSH auf Raspberry zugegriffen werden)
 - SSH
 - Benutzername & Passwort (Bsp: david, juer, etc.)
 - WiFi
@@ -66,7 +66,7 @@ sudo raspi-config
 - unter 8 Update -> raspi-config aktualisieren
 
 #### Wenn möglich fixe IP-Adresse im Netzwerk vergeben
-- Üblicherweise hat der Router des WLAN-Netzes eine Konfigurationsseite welche man über einen Browser erreichen kann (Bsp: [router.asus.com]([router.asus.com](http://router.asus.com/)). Über diese sollte es mittels Benutzeroberfläche möglich sein den Player zu finden und eine fixe IP zu vergeben (Bsp: Jür: 192.168.1.232, David: 192.168.1.231).
+- Üblicherweise hat der Router des WLAN-Netzes eine Konfigurationsseite welche man über einen Browser erreichen kann (Bsp: [router.asus.com]([router.asus.com](http://router.asus.com/)). Über diese sollte es mittels Benutzeroberfläche möglich sein den Player zu finden und eine fixe IP zu vergeben (Bsp: 192.168.1.232, 192.168.1.231).
 
 ## 4. Poweroptionen konfigurieren
 #### Nutzung des On-Off-Buttons ermöglichen:
