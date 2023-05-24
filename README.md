@@ -248,18 +248,20 @@ sudo reboot
 
 ## Z. Service und Updates
 
-#### Update der Programme
+### Update der Programme
 
 Um die konkreten Dateien upzudaten müssen die Dateien welche Vorversionen ersetzen sollen wie folgt abgelegt werden:
 - Website-Files: ``/transfer/html/stable/index.php`` und ``/transfer/html/stable//update_csv.php``
 - Player-File: ``/transfer/python/stable/CardCheckPlay_stable.py``
 
 Um die Dateien an die jeweiligen Stellen auf dem Raspberry zu kopieren/diese upzudaten können folgende Befehle verwendet werden:
-- Website-Files:
+
+#### Website-Files:
 ```console
 sudo cp /transfer/html/stable/index.php /var/www/html/; sudo cp /transfer/html/stable/update_csv.php /var/www/html/
 ```
-- Player-File:
+
+#### Player-File:
 - CAVE: Um ein sauberes Update durchzuführen muss der Prozess zuerst beendet werden. Dies erfolgt mit foldenden Terminal-Befehlen:
 ```console
 ps aux | grep python3
@@ -272,7 +274,7 @@ Das konkrete Update des Players wird mit folgendem Befehl ausgeführt:
 sudo cp /transfer/python/stable/CardCheckPlay_stable.py /scripts
 ```
 
-#### Extrahieren von Files für Manipulation/Troubleshooting:
+### Extrahieren von Files für Manipulation/Troubleshooting:
 - Websites-Files:
 ```console
 sudo cp /var/www/html/index.php /transfer/html/beta/; sudo cp /var/www/html/update_csv.php /transfer/html/beta/
@@ -282,4 +284,4 @@ sudo cp /var/www/html/index.php /transfer/html/beta/; sudo cp /var/www/html/upda
 sudo cp /scripts/index.php /transfer/html/beta/
 ```
 
-#### Die Versionshistorie findet sich im File Versionsinfo.txt
+### Die Versionshistorie findet sich im File Versionsinfo.txt
