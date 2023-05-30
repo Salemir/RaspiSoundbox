@@ -8,8 +8,8 @@ No Tonie, no Bullshit
 - RFID-Sticker (Bsp: [100 Stk. auf Amazon](https://www.amazon.de/dp/B07GH1P2M5?psc=1&ref=ppx_yo2ov_dt_b_product_details))
 - RC522 RFID-Leser (Bsp: [Amazon](https://www.amazon.de/s?k=rc522&ref=nb_sb_noss_2))
 - Es empfielt sich ein extra Gehäuse MIT MÖGLICHKEIT DES ANSTECKENS VON KONNEKTOREN AUF DEN GPIO-PINS zu kaufen. Rund um dieses Gehäuse kann man die Optik selbst kreieren (Bsp: [Gehäuse für Raspberry Pi 3A+](https://electronics.semaf.at/Coupe-Rainbow-Pibow-3-A-Coupe-for-Raspberry-Pi-3-A-))
-- evtl. Klinkenstecker-Verlängerung für Kabelführung in Gehäuse (Bsp: [](https://www.amazon.de/dp/B0052L7F3M?psc=1&ref=ppx_yo2ov_dt_b_product_details))
-- evtl. Micro-USB-Verlängerung für Kabelführung in Gehäuse (Bsp: [](https://www.amazon.de/dp/B01M70N4B4?psc=1&ref=ppx_yo2ov_dt_b_product_details))
+- evtl. Klinkenstecker-Verlängerung für Kabelführung in Gehäuse (Bsp: [Amazon](https://www.amazon.de/dp/B0052L7F3M?psc=1&ref=ppx_yo2ov_dt_b_product_details))
+- evtl. Micro-USB-Verlängerung für Kabelführung in Gehäuse (Bsp: [Amazon](https://www.amazon.de/dp/B01M70N4B4?psc=1&ref=ppx_yo2ov_dt_b_product_details))
 
 ## 1. Image auf SD-Karte spielen
 Image via [Raspberry Pi Imager](https://www.raspberrypi.com/software/) herunterladen und auf SD-Karte spielen (Stand 05.05.2023: Raspberry PI OS Lite 64-bit)
