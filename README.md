@@ -1,6 +1,16 @@
 # RaspiSoundbox
 No Tonie, no Bullshit
 
+## Bauteilliste
+- Raspberry Pi (Bsp: [Raspberry Pi 3A+](https://www.raspberrypi.com/products/raspberry-pi-3-model-a-plus/))
+- F -> F Jumper-Kabel (Bsp: 20cm bei [Semaf Electronics](https://electronics.semaf.at/Jumper-Wire-Female-to-Female-10Pin-20cm))
+- Taster für Lauter/Leiser/Ein-Aus (Bsp: Taster bei [Semaf Electronics](https://electronics.semaf.at/navi.php?qs=taster))
+- RFID-Sticker (Bsp: [100 Stk. auf Amazon](https://www.amazon.de/dp/B07GH1P2M5?psc=1&ref=ppx_yo2ov_dt_b_product_details))
+- RC522 RFID-Leser (Bsp: [Amazon](https://www.amazon.de/s?k=rc522&ref=nb_sb_noss_2))
+- Es empfielt sich ein extra Gehäuse MIT MÖGLICHKEIT DES ANSTECKENS VON KONNEKTOREN AUF DEN GPIO-PINS zu kaufen. Rund um dieses Gehäuse kann man die Optik selbst kreieren (Bsp: [Gehäuse für Raspberry Pi 3A+](https://electronics.semaf.at/Coupe-Rainbow-Pibow-3-A-Coupe-for-Raspberry-Pi-3-A-))
+- evtl. Klinkenstecker-Verlängerung für Kabelführung in Gehäuse (Bsp: [](https://www.amazon.de/dp/B0052L7F3M?psc=1&ref=ppx_yo2ov_dt_b_product_details))
+- evtl. Micro-USB-Verlängerung für Kabelführung in Gehäuse (Bsp: [](https://www.amazon.de/dp/B01M70N4B4?psc=1&ref=ppx_yo2ov_dt_b_product_details))
+
 ## 1. Image auf SD-Karte spielen
 Image via [Raspberry Pi Imager](https://www.raspberrypi.com/software/) herunterladen und auf SD-Karte spielen (Stand 05.05.2023: Raspberry PI OS Lite 64-bit)
 
@@ -32,6 +42,7 @@ Ein Schaltplan der Pins auf dem Raspberry findet sich im File [GPIO Raspberry.pn
 ## 3. Raspberry in Betrieb nehmen
 - Zuvor beschriebenen SD-Karte in den entsprechenden Slot stecken
 - Mit Netzteil verbinden (CAVE: mind. 1,5A-USB-Netzteil)
+- Audio-Out mittels Klinkenstecker an Boxen/Kopfhörer anschließen
 
 ### 3.A WENN Hostname, WiFi und SSH im Zuge des Installationsvorgangs nicht aktiviert wurden (ansonsten weiter mit 3.B):
 - Tastatur und Monitor anschließen
