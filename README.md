@@ -35,9 +35,9 @@ Ein Schaltplan der Pins auf dem Raspberry findet sich im File [GPIO Raspberry.pn
 - 3,3V -> 3V3 power, Pin 17
 
 #### Lautstärkeregler und Ein-/Aus-Taster anschließen:
-- Ein/Aus zwischen GPIO3 (Pin 5) und GND (Pin 6) 
-- Vol - zwischen GPIO26 (Pin 37) und GND (Pin 39)
-- Vol + zwischen GPIO16 (Pin 36) und GND (Pin 34)
+- Ein/Aus Taster zwischen GPIO3 (Pin 5) und GND (Pin 6) 
+- Vol - Taster zwischen GPIO26 (Pin 37) und GND (Pin 39)
+- Vol + Taster zwischen GPIO16 (Pin 36) und GND (Pin 34)
 
 ## 3. Raspberry in Betrieb nehmen
 - Zuvor beschriebenen SD-Karte in den entsprechenden Slot stecken
