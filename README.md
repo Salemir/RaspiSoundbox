@@ -3,11 +3,13 @@ No Tonie, no Bullshit
 
 ## Bauteilliste
 - Raspberry Pi (Bsp: [Raspberry Pi 3A+](https://www.raspberrypi.com/products/raspberry-pi-3-model-a-plus/))
+- Micro SD-Karte nach Wahl (zumindest 16gb empfohlen)
 - F -> F Jumper-Kabel (Bsp: 20cm bei [Semaf Electronics](https://electronics.semaf.at/Jumper-Wire-Female-to-Female-10Pin-20cm))
 - Taster für Lauter/Leiser/Ein-Aus (Bsp: Taster bei [Semaf Electronics](https://electronics.semaf.at/navi.php?qs=taster))
 - RFID-Sticker (Bsp: 100Stk. auf [Amazon](https://www.amazon.de/dp/B07GH1P2M5?psc=1&ref=ppx_yo2ov_dt_b_product_details))
 - RC522 RFID-Leser (Bsp: [Amazon](https://www.amazon.de/s?k=rc522&ref=nb_sb_noss_2))
 - Es empfielt sich ein extra Gehäuse MIT MÖGLICHKEIT DES ANSTECKENS VON KONNEKTOREN AUF DEN GPIO-PINS zu kaufen. Rund um dieses Gehäuse kann die Optik selbst kreiert werden (Bsp: [Gehäuse für Raspberry Pi 3A+](https://electronics.semaf.at/Coupe-Rainbow-Pibow-3-A-Coupe-for-Raspberry-Pi-3-A-))
+- Empfehlung: Kühlkörper für Wärmeableitung (Bsp: [Raspishop](https://www.rasppishop.de/kuehlkoerper_2))
 - evtl. Klinkenstecker-Verlängerung für Kabelführung in Gehäuse (Bsp: [Amazon](https://www.amazon.de/dp/B0052L7F3M?psc=1&ref=ppx_yo2ov_dt_b_product_details))
 - evtl. Micro-USB-Verlängerung für Kabelführung in Gehäuse (Bsp: [Amazon](https://www.amazon.de/dp/B01M70N4B4?psc=1&ref=ppx_yo2ov_dt_b_product_details))
 
