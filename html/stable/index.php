@@ -50,8 +50,8 @@
 	       	<br>
 	        <input type="submit" value="Änderungen speichern"><br><br>
 	        </form>
-            <a href="http://192.168.1.231/raspitracks/trackverz.CSV" download><button>Download Trackverzeichnis</button></a><br>
-            <p>PHP Analyseseite des Raspi-Servers: <a href="http://192.168.1.231/phptest.php">phptest.php</a>.<br/>
+            <a href="http://<?php echo $_SERVER['SERVER_ADDR']; ?>/raspitracks/trackverz.CSV" download><button>Download Trackverzeichnis</button></a><br>
+            <p>PHP Analyseseite des Raspi-Servers: <a href="http://<?php echo $_SERVER['SERVER_ADDR']; ?>/phptest.php">phptest.php</a><br/>
     	</div>
 	<!-- Zweite Sektion -->
 	<div class="section">
