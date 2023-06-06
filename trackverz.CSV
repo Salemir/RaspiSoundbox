@@ -49,5 +49,5 @@ IdTrack047;;;;
 IdTrack048;;;;
 IdTrack049;;;;
 IdTrack050;;;;
-IdStop1;;Stop-RFID #1;;
-IdStop2;;Stop-RFID #2;;
+IdStop1;;Stop-RFID 1;;
+IdStop2;;Stop-RFID 2;;
