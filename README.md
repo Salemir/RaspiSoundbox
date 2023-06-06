@@ -234,7 +234,7 @@ Unter ``/var/www/html`` befindet sich die Dateiablage für die Website der Playe
 #### Trackverzeichnis implementieren
 Die Datei ``trackverz.CSV`` zuerst auf einem PC bearbeiten (RFID-Nummern der jeweiligen Sticker/Karten/etc. eintragen und mit Kommentar versehen) über den Uploadbutton der Weboberfläche des Raspberrys uploaden und auf Upload/Refresh klicken.
 
-Es macht Sinn, RFID-Tags als "Stop" zu definieren. Hierzu sind die beiden letzten Zeilen im File ``trackverz.CSV`` reserviert. Wenn man diese am PC öffnet wird die erste Spalte ersichtlich. Bei den "Stop"-Tags lautet die interne Bezeichnung "IdStop1" und "IdStop2".
+Es macht Sinn, RFID-Tags als "Stop" zu definieren. Hierzu sind die beiden letzten Zeilen im File ``trackverz.CSV`` reserviert. Wenn man diese am PC öffnet wird die erste Spalte ersichtlich. Bei den "Stop"-Tags lautet die interne Bezeichnung "IdStop1" und "IdStop2". In der Weboberflächefinden sich die Zeilen dazu bei den Einträgen in der Spalte "Stickerbezeichnung" -> "Stop-RFID 1" und "Stop-RFID 2".
 
 #### RFIDs lesen
 Um RFID-Sticker/Karten/etc. zu lesen kann das ein spezielles Programm im Terminal aufgerufen werden:
