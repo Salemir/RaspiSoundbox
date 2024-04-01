@@ -130,9 +130,6 @@ Wenn "active (running)" in grün angezeigt wird ist alles im grünen Bereich
 ```console
 sudo nano /etc/samba/smb.conf
 ```
-```console
-sudo nano smb.conf
-```
 #### Hinzufügen von folgendem Block ganz unten im File
 
 > [transfer]
