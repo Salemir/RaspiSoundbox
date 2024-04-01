@@ -133,6 +133,7 @@ sudo nano /etc/samba/smb.conf
 #### Hinzufügen von folgendem Block ganz unten im File
 
 > [transfer]
+
 > comment = Für Übertragung von Scripts und sonstiger Daten auf den Raspi  
 > path = /transfer  
 > read only = no  
