@@ -246,17 +246,19 @@ Das Programm lässt sich mit der Tastenkombination STRG+C beenden.
 ## 9. Player konfigurieren
 Wie bereits zuvor geschrieben, die Dateistrukturen müssen wie angegeben existieren und die jeweiligen Dateien in diesen Strukturen abgelegt sein.
 ```console
-sudo cp /transfer/python/stable/CardCheckPlay_stable.py /scripts; sudo crontab -e
+sudo cp /transfer/python/stable/CardCheckPlay_stable.py /scripts; crontab -e
 ```
 Hier ist die Aktion ``nano`` zu wählen. Um den Autostart zu aktivieren ist folgende Zeile ganz unten im File hinzuzufügen:
-> @reboot python3 /scripts/CardCheckPlay_stable.py &
+> @reboot env PULSE_SERVER=unix:/run/user/1000/pulse/native python3 /scripts/CardCheckPlay_stable.py &
 
 File speichern und schließen. (STRG+X -> Y)
 ```console
 sudo reboot 
 ```
+## 10. Bluetooth und Bluetooth-Autoconnect konfigurieren
 
-## 10. System aktualisieren
+
+## 11. System aktualisieren
 ```console
 sudo apt-get update; sudo apt-get upgrade; sudo apt-get dist-upgrade
 ```
@@ -264,7 +266,7 @@ sudo apt-get update; sudo apt-get upgrade; sudo apt-get dist-upgrade
 sudo reboot 
 ```
 
-## 11. Inbetriebnahme
+## 12. Inbetriebnahme
 - Lieder via Weboberfläche (erreichbar über IP.AD.RE.SSE oder HOSTNAME.local mit einem Browser auf einem Gerät im selben Netzwerk) hochladen. CAVE: Nach letztem Track ist nochmals ein Klick auf den "Upload/Refresh"-Button notwendig.
 - Um konkrete Zuweisungen der Tracks zu den RFID-Stickern herzustellen ist der Trackname (inklusive .mp3) in das jeweilige Feld im linken Bereich der Website einzutragen. Am Ende der Liste findet sich der Button ``Änderungen speichern``.
 
