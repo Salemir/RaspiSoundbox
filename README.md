@@ -227,7 +227,7 @@ sudo usermod -a -G www-data USERNAME
 ```console
 sudo rm /var/www/html/index.nginx-debian.html; sudo cp -r /transfer/html/stable/* /var/www/html/; sudo mkdir -m 1777 /var/www/html/raspitracks; sudo chown -R www-data:www-data /var/www/html/raspitracks
 ```
-Unter ``/var/www/html`` befindet sich die Dateiablage für die Website der Player-Verwaltung (Trackzuordnung, Tracklöschung, etc.). Durch einen Aufruf der IP.AD.RE.SSE oder HOSTNAME.local (HOSTNAME wurde am Anfang dieses Tutorials definiert) auf einem Browser eines Geräts im gleichen Netzwerk erreicht man die Playerverwaltung.
+Unter ``/var/www/html`` befindet sich die Dateiablage für die Website der Player-Verwaltung (Trackzuordnung, Tracklöschung, etc.). Durch einen erstmaligen Aufruf der IP.AD.RE.SSE (ab dann via HOSTNAME.local möglich; HOSTNAME wurde am Anfang dieses Tutorials definiert) auf einem Browser eines Geräts im gleichen Netzwerk erreicht man die Playerverwaltung.
 
 #### Trackverzeichnis implementieren
 Die Datei ``trackverz.CSV`` zuerst auf einem PC bearbeiten (RFID-Nummern der jeweiligen Sticker/Karten/etc. eintragen und mit Kommentar versehen) über den Uploadbutton der Weboberfläche des Raspberrys uploaden und auf Upload/Refresh klicken.
