@@ -256,7 +256,33 @@ File speichern und schließen. (STRG+X -> Y)
 sudo reboot 
 ```
 ## 10. Bluetooth und Bluetooth-Autoconnect konfigurieren
+in /etc/bluetooth/main.conf Namen geben und folgende Zeile unter [General] hinzufügen:
+Enable=Source,Sink,Media,Socket
 
+sudo apt-get install pulseaudio
+sudo apt-get install pulseaudio-module-bluetooth
+
+Unter sudo nano /etc/pulse/default.pa folgendes unter load-module module-switch-on-port-available hinzufügen:
+load-module module-switch-on-connect
+
+sudo reboot
+
+Modul neu starten
+
+bluetoothctl
+scan on
+pair MACADRESSEDESGEWÜNSCHTENGERÄTS
+connect MACADRESSEDESGEWÜNSCHTENGERÄTS
+
+pactl list sinks [Box muss a2dp_sink am Ende haben; ansonsten Wechsel mit pacmd set-card-profile NUMMERDERCARD a2dp_sink]
+
+pacmd set-default-sink bluez_sink.20_64_DE_AD_2A_6C.a2dp_sink
+
+pulseaudio -k
+pulseaudio -D
+sudo systemctl restart bluetooth
+
+bluetoothctl connect 20:64:DE:AD:2A:6C
 
 ## 11. System aktualisieren
 ```console
