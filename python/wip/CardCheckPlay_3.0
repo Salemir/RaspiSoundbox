@@ -17,6 +17,9 @@ VOLUME_DOWN_PIN = 26
 # Set initial volume to 70%
 volume = 70
 
+# Definition von Standard-Bluetooth-Device
+befehl = "sudo bluetoothctl connect 20:64:DE:AD:2A:6C"
+
 # Set the command to adjust the volume
 def set_volume(vol):
     os.system(f'amixer sset Master {vol}% > /dev/null')
@@ -72,6 +75,7 @@ def search_csv(pfad, suchvariable):
 def play_mp3(file_path):
     subprocess.run(["mpg123", file_path])
 
+
 # Checkfunktion ob MP3 gespielt wird
 def is_mpg123_playing():
     try:
@@ -91,6 +95,17 @@ path = "/var/www/html/raspitracks/"
 trackname = None
 rfid = 99
 
+# Erstverbindungsversuch mit Bluetooth
+try:
+    # Verwenden von subprocess.run() für die Ausführung des Befehls
+    # mit shell=True, damit das Kommando wie in einer Shell ausgeführt wird
+    subprocess.run(befehl, shell=True, check=True)
+    print("Befehl erfolgreich ausgeführt.")
+except subprocess.CalledProcessError as e:
+    # Falls der Befehl fehlschlägt, wird eine Fehlermeldung ausgegeben
+    print("Fehler beim Ausführen des Befehls:", e)
+
+
 while True:
     try:
         print('Los gehts, Chip auflegen!')
@@ -109,7 +124,6 @@ while True:
                     mp3_file_path = None
                     playcheckvar = 0
                     time.sleep(2)
-
                 # WENN ein Tag aufgelegt wird welcher in der CSV gefunden wird
                 elif (rfid != IdStop1 or rfid != IdStop2) and search_csv(csv_file_path, searchvar) != 999:
                     searchvar = str(rfid)
@@ -135,6 +149,15 @@ while True:
             # WENN der gleiche Chip aufgelegt ist wie zuvor UND der Player spielt:
             # Mache nichts und check nach 3 Sekunden nochmal
             elif rfid == checkvar and is_mpg123_playing() is True:
+                try:
+                    # Verwenden von subprocess.run() für die Ausführung des Befehls
+                    # mit shell=True, damit das Kommando wie in einer Shell ausgeführt wird
+                    subprocess.run(befehl, shell=True, check=True)
+                    print("Befehl erfolgreich ausgeführt.")
+                except subprocess.CalledProcessError as e:
+                    # Falls der Befehl fehlschlägt, wird eine Fehlermeldung ausgegeben
+                    print("Fehler beim Ausführen des Befehls:", e)
+
                 time.sleep(3)
                 rfid = reader.read()[0]
 
@@ -151,4 +174,3 @@ while True:
     finally:
         print("GPIO cleanen")
         GPIO.cleanup()
-
