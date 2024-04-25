@@ -20,7 +20,8 @@ AutoShutdown bei 3 Stunden nach Boot
 2.3:
 Weboberfläche implementiert
 
-
+3.0
+Bluetooth implementiert
 
 
 
